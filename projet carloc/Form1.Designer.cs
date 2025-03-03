@@ -63,6 +63,7 @@
             label12 = new Label();
             textBox12 = new TextBox();
             button3 = new Button();
+            tabPage3 = new TabPage();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -157,6 +158,7 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(11, 10);
             tabControl1.Margin = new Padding(2, 1, 2, 1);
             tabControl1.Name = "tabControl1";
@@ -407,6 +409,16 @@
             button3.Text = "Rechercher";
             button3.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(744, 428);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "tabPage3";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
             // F
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -469,5 +481,6 @@
         private Label label8;
         private Button button3;
         private TextBox textBox12;
+        private TabPage tabPage3;
     }
 }
