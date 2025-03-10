@@ -261,7 +261,7 @@
             tabPage2.Padding = new Padding(2, 1, 2, 1);
             tabPage2.Size = new Size(744, 428);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Recherche";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
