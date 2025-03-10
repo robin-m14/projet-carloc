@@ -48,22 +48,26 @@
             label4 = new Label();
             tabPage2 = new TabPage();
             groupBox3 = new GroupBox();
-            label6 = new Label();
-            textBox6 = new TextBox();
-            label7 = new Label();
-            textBox7 = new TextBox();
-            label8 = new Label();
-            textBox8 = new TextBox();
-            label9 = new Label();
-            textBox9 = new TextBox();
-            label10 = new Label();
-            textBox10 = new TextBox();
-            label11 = new Label();
-            textBox11 = new TextBox();
-            label12 = new Label();
-            textBox12 = new TextBox();
+            numericUpDown1 = new NumericUpDown();
             button3 = new Button();
+            textBox12 = new TextBox();
+            label12 = new Label();
+            textBox11 = new TextBox();
+            label11 = new Label();
+            textBox10 = new TextBox();
+            label10 = new Label();
+            textBox9 = new TextBox();
+            label9 = new Label();
+            label8 = new Label();
+            textBox7 = new TextBox();
+            label7 = new Label();
+            textBox6 = new TextBox();
+            label6 = new Label();
             tabPage3 = new TabPage();
+            tabPage4 = new TabPage();
+            groupBox4 = new GroupBox();
+            btnSupp = new Button();
+            listBox1 = new ListBox();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -71,6 +75,9 @@
             groupBox2.SuspendLayout();
             tabPage2.SuspendLayout();
             groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            tabPage4.SuspendLayout();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -159,6 +166,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
             tabControl1.Location = new Point(11, 10);
             tabControl1.Margin = new Padding(2, 1, 2, 1);
             tabControl1.Name = "tabControl1";
@@ -261,11 +269,12 @@
             tabPage2.Padding = new Padding(2, 1, 2, 1);
             tabPage2.Size = new Size(744, 428);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Recherche";
+            tabPage2.Text = "Gestion voitures";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(numericUpDown1);
             groupBox3.Controls.Add(button3);
             groupBox3.Controls.Add(textBox12);
             groupBox3.Controls.Add(label12);
@@ -275,7 +284,6 @@
             groupBox3.Controls.Add(label10);
             groupBox3.Controls.Add(textBox9);
             groupBox3.Controls.Add(label9);
-            groupBox3.Controls.Add(textBox8);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(textBox7);
             groupBox3.Controls.Add(label7);
@@ -286,103 +294,32 @@
             groupBox3.Size = new Size(733, 400);
             groupBox3.TabIndex = 0;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Recherche";
+            groupBox3.Text = "Ajouter Véhicule";
             // 
-            // label6
+            // numericUpDown1
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(48, 39);
-            label6.Name = "label6";
-            label6.Size = new Size(54, 15);
-            label6.TabIndex = 0;
-            label6.Text = "Marque :";
+            numericUpDown1.Location = new Point(600, 36);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(68, 23);
+            numericUpDown1.TabIndex = 15;
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
-            // textBox6
+            // button3
             // 
-            textBox6.Location = new Point(108, 36);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(110, 23);
-            textBox6.TabIndex = 1;
+            button3.Location = new Point(286, 328);
+            button3.Name = "button3";
+            button3.Size = new Size(202, 28);
+            button3.TabIndex = 14;
+            button3.Text = "Ajouter";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
-            // label7
+            // textBox12
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(299, 39);
-            label7.Name = "label7";
-            label7.Size = new Size(53, 15);
-            label7.TabIndex = 2;
-            label7.Text = "Modèle :";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(352, 36);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 3;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(547, 39);
-            label8.Name = "label8";
-            label8.Size = new Size(47, 15);
-            label8.TabIndex = 4;
-            label8.Text = "Année :";
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(600, 36);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 23);
-            textBox8.TabIndex = 5;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(57, 138);
-            label9.Name = "label9";
-            label9.Size = new Size(32, 15);
-            label9.TabIndex = 6;
-            label9.Text = "Prix :";
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(95, 138);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 7;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(299, 138);
-            label10.Name = "label10";
-            label10.Size = new Size(33, 15);
-            label10.TabIndex = 8;
-            label10.Text = "Etat :";
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(338, 135);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 23);
-            textBox10.TabIndex = 9;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(544, 138);
-            label11.Name = "label11";
-            label11.Size = new Size(77, 15);
-            label11.TabIndex = 10;
-            label11.Text = "Kilométrage :";
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(627, 135);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 23);
-            textBox11.TabIndex = 11;
+            textBox12.Location = new Point(352, 213);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(100, 23);
+            textBox12.TabIndex = 13;
             // 
             // label12
             // 
@@ -393,21 +330,95 @@
             label12.TabIndex = 12;
             label12.Text = "Essence :";
             // 
-            // textBox12
+            // textBox11
             // 
-            textBox12.Location = new Point(352, 213);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(100, 23);
-            textBox12.TabIndex = 13;
+            textBox11.Location = new Point(627, 135);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(100, 23);
+            textBox11.TabIndex = 11;
             // 
-            // button3
+            // label11
             // 
-            button3.Location = new Point(286, 328);
-            button3.Name = "button3";
-            button3.Size = new Size(202, 28);
-            button3.TabIndex = 14;
-            button3.Text = "Rechercher";
-            button3.UseVisualStyleBackColor = true;
+            label11.AutoSize = true;
+            label11.Location = new Point(544, 138);
+            label11.Name = "label11";
+            label11.Size = new Size(77, 15);
+            label11.TabIndex = 10;
+            label11.Text = "Kilométrage :";
+            // 
+            // textBox10
+            // 
+            textBox10.Location = new Point(338, 135);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(100, 23);
+            textBox10.TabIndex = 9;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(299, 138);
+            label10.Name = "label10";
+            label10.Size = new Size(33, 15);
+            label10.TabIndex = 8;
+            label10.Text = "Etat :";
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(95, 138);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(100, 23);
+            textBox9.TabIndex = 7;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(57, 138);
+            label9.Name = "label9";
+            label9.Size = new Size(32, 15);
+            label9.TabIndex = 6;
+            label9.Text = "Prix :";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(547, 39);
+            label8.Name = "label8";
+            label8.Size = new Size(47, 15);
+            label8.TabIndex = 4;
+            label8.Text = "Année :";
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(352, 36);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(100, 23);
+            textBox7.TabIndex = 3;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(299, 39);
+            label7.Name = "label7";
+            label7.Size = new Size(53, 15);
+            label7.TabIndex = 2;
+            label7.Text = "Modèle :";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(108, 36);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(110, 23);
+            textBox6.TabIndex = 1;
+            textBox6.TextChanged += textBox6_TextChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(48, 39);
+            label6.Name = "label6";
+            label6.Size = new Size(54, 15);
+            label6.TabIndex = 0;
+            label6.Text = "Marque :";
             // 
             // tabPage3
             // 
@@ -418,6 +429,47 @@
             tabPage3.TabIndex = 2;
             tabPage3.Text = "tabPage3";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(groupBox4);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(744, 428);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Liste des voitures";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(btnSupp);
+            groupBox4.Controls.Add(listBox1);
+            groupBox4.Location = new Point(6, 6);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(727, 402);
+            groupBox4.TabIndex = 0;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Liste des véhicules";
+            // 
+            // btnSupp
+            // 
+            btnSupp.Location = new Point(567, 363);
+            btnSupp.Name = "btnSupp";
+            btnSupp.Size = new Size(136, 23);
+            btnSupp.TabIndex = 1;
+            btnSupp.Text = "Supprimer un véhicule";
+            btnSupp.UseVisualStyleBackColor = true;
+            btnSupp.Click += btnSupp_Click;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(32, 22);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(671, 364);
+            listBox1.TabIndex = 0;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // F
             // 
@@ -441,6 +493,9 @@
             tabPage2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            tabPage4.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -477,10 +532,14 @@
         private Label label10;
         private TextBox textBox9;
         private Label label9;
-        private TextBox textBox8;
         private Label label8;
         private Button button3;
         private TextBox textBox12;
         private TabPage tabPage3;
+        private TabPage tabPage4;
+        private GroupBox groupBox4;
+        private ListBox listBox1;
+        private NumericUpDown numericUpDown1;
+        private Button btnSupp;
     }
 }
