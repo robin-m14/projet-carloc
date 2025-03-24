@@ -68,6 +68,9 @@
             groupBox4 = new GroupBox();
             btnSupp = new Button();
             listBox1 = new ListBox();
+            button4 = new Button();
+            button5 = new Button();
+            tabPage5 = new TabPage();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -167,6 +170,7 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tabPage5);
             tabControl1.Location = new Point(11, 10);
             tabControl1.Margin = new Padding(2, 1, 2, 1);
             tabControl1.Name = "tabControl1";
@@ -299,6 +303,7 @@
             // numericUpDown1
             // 
             numericUpDown1.Location = new Point(600, 36);
+            numericUpDown1.Maximum = new decimal(new int[] { 2026, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(68, 23);
             numericUpDown1.TabIndex = 15;
@@ -443,6 +448,8 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(button5);
+            groupBox4.Controls.Add(button4);
             groupBox4.Controls.Add(btnSupp);
             groupBox4.Controls.Add(listBox1);
             groupBox4.Location = new Point(6, 6);
@@ -470,6 +477,34 @@
             listBox1.Size = new Size(671, 364);
             listBox1.TabIndex = 0;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(486, 363);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 2;
+            button4.Text = "Réserver";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(405, 363);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 23);
+            button5.TabIndex = 3;
+            button5.Text = "Acheter";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(3);
+            tabPage5.Size = new Size(744, 428);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "tabPage5";
+            tabPage5.UseVisualStyleBackColor = true;
             // 
             // F
             // 
@@ -541,5 +576,8 @@
         private ListBox listBox1;
         private NumericUpDown numericUpDown1;
         private Button btnSupp;
+        private Button button5;
+        private Button button4;
+        private TabPage tabPage5;
     }
 }

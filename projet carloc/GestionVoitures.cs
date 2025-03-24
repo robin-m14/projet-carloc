@@ -92,7 +92,7 @@ namespace GestionVoituresApp // Un nom unique pour éviter le conflit
             listBox.Items.Clear();
             foreach (var voiture in voitures)
             {
-                listBox.Items.Add($"{voiture.Marque} {voiture.Modele} {voiture.Annee} - {voiture.Prix}€");
+                listBox.Items.Add($"{voiture.Marque} {voiture.Modele} - {voiture.Annee} - {voiture.Prix}€ - {voiture.Etat} - {voiture.Kilometrage} - {voiture.Carburant}");
             }
 
             // 🔹 Vérifier la liste après suppression

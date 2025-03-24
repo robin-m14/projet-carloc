@@ -16,6 +16,7 @@ namespace projet_carloc
         public F()
         {
             InitializeComponent();
+            MettreAJourListeVoitures();
         }
 
         private void F_Load(object sender, EventArgs e)
@@ -159,6 +160,7 @@ namespace projet_carloc
             List<Voiture> voitures = gestionVoitures.ObtenirVoitures();
 
             // Ajouter chaque voiture dans la ListBox
+            listBox1.Items.Clear();
             foreach (Voiture voiture in voitures)
             {
                 listBox1.Items.Add($"{voiture.Marque} {voiture.Modele} - {voiture.Annee} - {voiture.Prix}€ - {voiture.Etat} - {voiture.Kilometrage} - {voiture.Carburant}");
@@ -180,23 +182,19 @@ namespace projet_carloc
             string modele = textBox7.Text;
             string annee = numericUpDown1.Text;
             string etat = textBox10.Text;
+
+            string valeurRecuperee = listBox1.SelectedItem.ToString();
+            string kilometrageString = valeurRecuperee; // Exemple : "84848E"
+            kilometrageString = new string(kilometrageString.Where(char.IsDigit).ToArray()); // Supprime les lettres
+
             int kilometrage;
-            decimal prix;
+            if (!int.TryParse(kilometrageString, out kilometrage))
+            {
+                MessageBox.Show("Erreur : Le kilométrage doit être un nombre entier.");
+                return;
+            }
+            decimal prix = decimal.Parse(textBox9.Text);
             string carburant = textBox12.Text;
-
-            // Vérifier la conversion du prix
-            if (!decimal.TryParse(textBox9.Text, out prix))
-            {
-                MessageBox.Show("Le prix doit être un nombre valide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Vérifier la conversion du kilométrage
-            if (!int.TryParse(textBox11.Text, out kilometrage))
-            {
-                MessageBox.Show("Le kilométrage doit être un nombre entier.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
             // Appel de la méthode de suppression
             gestionVoitures.SupprimerVoiture(marque, modele, annee, prix, etat, kilometrage, carburant, listBox1);
